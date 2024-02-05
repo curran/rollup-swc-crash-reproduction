@@ -2,14 +2,15 @@
   "name": "rollup-swc-crash-reproduction",
   "version": "1.0.0",
   "description": "Minimal reproduction for Rollup #5379",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node ./index.js"
+    "test": "node ./test.js",
+    "test-swc": "node ./test-swc.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@swc/core": "^1.4.0",
     "rollup": "^4.9.6"
   }
 }

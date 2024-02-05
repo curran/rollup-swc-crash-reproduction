@@ -1,4 +1,3 @@
-// rollup-script.js
 import { rollup } from "rollup";
 
 async function main() {

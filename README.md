@@ -36,3 +36,24 @@ Aborted (core dumped)
 ```
 
 Note that the logic in the `catch` block never executes.
+
+## SWC Test
+
+There's also a minimal reproduction for the same crash in SWC directly.
+
+```
+$ npm run test-swc
+
+> rollup-swc-crash-reproduction@1.0.0 test-swc
+> node ./test-swc.js
+
+thread '<unnamed>' panicked at /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/swc_ecma_compat_es2015-0.4.0/src/duplicate_keys.rs:67:33:
+internal error: entered unreachable code: assign property in object literal is invalid
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Caught an error from SWC:  [Error: failed to handle: internal error: entered unreachable code: assign property in object literal is invalid] {
+  code: 'GenericFailure'
+}
+[Error: failed to handle: internal error: entered unreachable code: assign property in object literal is invalid] {
+  code: 'GenericFailure'
+}
+```
