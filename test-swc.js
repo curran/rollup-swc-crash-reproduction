@@ -15,6 +15,7 @@ async function main() {
 
     console.log(result.code);
   } catch (error) {
+    // This does trigger
     console.log("Caught an error from SWC: ", error);
     console.error(error);
   }
