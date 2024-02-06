@@ -1,4 +1,1 @@
-const foo = {
-  bar = baz,
-};
-console.log(foo);
+const foo = { bar = baz };
